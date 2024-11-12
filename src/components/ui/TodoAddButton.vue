@@ -1,10 +1,10 @@
 <template>
    <button
       type="submit"
-      class="todo__add-button"
+      class="todo__add-task-button"
       @click="$emit('click')"
    >
-      <div class="todo__add-button-text">
+      <div class="todo__add-task-button-text">
          Create
       </div>
    </button>
@@ -35,7 +35,7 @@ export default class TodoAddButton extends Vue {
 
 <style lang="sass">
    .todo
-      &__add-button
+      &__add-task-button
          border: 0
          background: var(--blue-dark)
          border-radius: 8px
@@ -48,7 +48,7 @@ export default class TodoAddButton extends Vue {
          &:hover
             background: var(--blue)
             box-shadow: 0 0 3px 0px var(--blue)
-      &__add-button-text
+      &__add-task-button-text
          position: relative
          padding-right: 22px
          &::before

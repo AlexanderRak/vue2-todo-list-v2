@@ -1,5 +1,5 @@
 <template>
-   <button @click="removeTask" class="todo__remove-button">
+   <button @click="removeTask" class="todo__task-remove-button">
       ❌
    </button>
 </template>
@@ -34,7 +34,7 @@ export default class TodoRemoveButton extends Vue {
 
 <style lang="sass">
    .todo
-      &__remove-button
+      &__task-remove-button
          background: none
          border: none
          cursor: pointer

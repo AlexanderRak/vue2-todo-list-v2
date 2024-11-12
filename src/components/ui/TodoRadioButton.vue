@@ -1,5 +1,5 @@
 <template>
-   <button @click="toggleStatus" class="todo__radio-button">
+   <button @click="toggleStatus" class="todo__task-radio-button">
       {{ task.completed ? '✔️' : '⬜️' }}
    </button>
 </template>
@@ -34,7 +34,7 @@ export default class TodoRadioButton extends Vue {
 
 <style lang="sass">
    .todo
-      &__radio-button
+      &__task-radio-button
          background: none
          border: none
          cursor: pointer

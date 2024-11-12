@@ -4,6 +4,7 @@
          <Header/>
          <div class="todo__container">
             <TodoForm/>
+            <TodoStatistic/>
             <TodoList
                v-if="tasks.length"
             />
@@ -21,6 +22,7 @@ import { Component, Vue } from 'vue-property-decorator'
 import { mapGetters } from 'vuex'
 import Header from './components/layout/Header.vue'
 import TodoForm from './components/todo/TodoForm.vue'
+import TodoStatistic from './components/todo/TodoStatistic.vue'
 import TodoList from './components/todo/TodoList.vue'
 import TodoListEmpty from './components/todo/TodoListEmpty.vue'
 import Footer from './components/layout/Footer.vue'
@@ -29,6 +31,7 @@ import Footer from './components/layout/Footer.vue'
    components: {
       Header,
       TodoForm,
+      TodoStatistic,
       TodoList,
       TodoListEmpty,
       Footer
