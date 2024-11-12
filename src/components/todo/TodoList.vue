@@ -1,13 +1,26 @@
 <template>
-   <div>
-
+   <div class="todo__list">
+      <TodoItem
+         v-for="task in tasks"
+         :key="task.id"
+         :task="task"
+      />
    </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import TodoItem from '../todo/TodoItem.vue'
+import { mapGetters } from 'vuex'
 
-@Component({})
+@Component({
+   components: {
+      TodoItem
+   },
+   computed: {
+      ...mapGetters(['allTasks'])
+   }
+})
 export default class TodoList extends Vue {
    // props
 
@@ -20,6 +33,9 @@ export default class TodoList extends Vue {
    // hooks
 
    // computed
+   get tasks () {
+      return this.$store.getters.allTasks
+   }
 
    // methods
 
