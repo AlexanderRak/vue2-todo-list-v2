@@ -59,8 +59,8 @@ export default class TodoForm extends Vue {
 <style lang="sass">
    .todo
       &__list-item
-         background: var(--gray-500)
          padding: 1rem
+         background: var(--gray-500)
          border-radius: 0.5rem
          display: grid
          grid-template-columns: 1.5rem 1fr 1.5rem
