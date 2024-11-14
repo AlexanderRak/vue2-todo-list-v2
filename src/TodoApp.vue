@@ -5,12 +5,16 @@
          <div class="todo__container">
             <TodoForm/>
             <TodoStatistic/>
-            <TodoList
-               v-if="tasks.length"
-            />
-            <TodoListEmpty
-               v-else
-            />
+            <transition-group name="fade" tag="div" class="todo__list-wrap">
+               <TodoList
+                  v-if="tasks.length"
+                  :key="'todo-list'"
+               />
+               <TodoListEmpty
+                  v-else
+                  :key="'todo-list-empty'"
+               />
+            </transition-group>
          </div>
          <Footer/>
       </div>
@@ -65,7 +69,15 @@ export default class TodoApp extends Vue {
 <style lang="sass">
    .todo
       &__container
-         max-width: 766px
-         padding: 0 15px
-         margin: -27px auto 0 auto
+         max-width: 46rem
+         padding: 0 1rem 2rem 1rem
+         margin: -24px auto 5rem auto
+         position: relative
+         z-index: 3
+      &__list-wrap
+         position: relative
+   .fade-enter-active, .fade-leave-active
+      transition: opacity .5s
+   .fade-enter, .fade-leave-to
+      opacity: 0
 </style>

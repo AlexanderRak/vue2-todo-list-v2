@@ -1,11 +1,11 @@
 <template>
-   <div class="todo__list">
+   <transition-group name="slide-fade" tag="div" class="todo__list">
       <TodoItem
          v-for="task in tasks"
          :key="task.id"
          :task="task"
       />
-   </div>
+   </transition-group>
 </template>
 
 <script lang="ts">
@@ -44,5 +44,19 @@ export default class TodoList extends Vue {
 </script>
 
 <style lang="sass">
-
+   .todo
+      &__list
+         display: flex
+         flex-direction: column
+         gap: 1rem
+         position: relative
+         z-index: 2
+   .slide-fade-enter-active, .slide-fade-leave-active
+      transition: all .3s ease
+   .slide-fade-enter
+      transform: translateX(10px)
+      opacity: 0
+   .slide-fade-leave-to
+      transform: translateX(-10px)
+      opacity: 0
 </style>

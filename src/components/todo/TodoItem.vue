@@ -1,10 +1,15 @@
 <template>
-   <div style="color: #fff;">
-      {{ task.title }}
+   <div class="todo__list-item">
       <TodoRadioButton
          :task="task"
          @toggle-task-status="toggleTaskStatus"
       />
+      <div
+         class="todo__list-item__text"
+         :class="{ completed: task.completed }"
+      >
+         {{ task.title }}
+      </div>
       <TodoRemoveButton
          :task="task"
          @remove-task="removeTask"
@@ -52,5 +57,20 @@ export default class TodoForm extends Vue {
 </script>
 
 <style lang="sass">
-
+   .todo
+      &__list-item
+         background: var(--gray-500)
+         padding: 1rem
+         border-radius: 0.5rem
+         display: grid
+         grid-template-columns: 1.5rem 1fr 1.5rem
+         grid-gap: 12px
+         color: #000
+      &__list-item__text
+         font-size: 1rem
+         color: var(--gray-100)
+         transition: .3s
+         &.completed
+            text-decoration: line-through
+            color: var(--gray-300)
 </style>

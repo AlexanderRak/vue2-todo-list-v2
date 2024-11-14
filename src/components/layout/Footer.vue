@@ -33,7 +33,7 @@ export default class Footer extends Vue {
    .todo
       &__footer
          background: #0D0D0D
-         height: 70px
+         height: 5rem
          color: #fff
          text-align: center
          position: fixed
@@ -42,4 +42,5 @@ export default class Footer extends Vue {
          display: flex
          align-items: center
          justify-content: center
+         z-index: 3
 </style>

@@ -36,10 +36,9 @@ export default class TodoAddButton extends Vue {
 <style lang="sass">
    .todo
       &__add-task-button
-         border: 0
+         border: 1px solid var(--gray-700)
          background: var(--blue-dark)
          border-radius: 8px
-         padding: 0 16px
          color: var(--gray-100)
          font-size: 14px
          font-weight: bold
@@ -47,10 +46,12 @@ export default class TodoAddButton extends Vue {
          transition: .3s
          &:hover
             background: var(--blue)
-            box-shadow: 0 0 3px 0px var(--blue)
+            border: 1px solid var(--blue)
       &__add-task-button-text
          position: relative
-         padding-right: 22px
+         padding: 0 1.4rem 0 0
+         display: inline-flex
+         line-height: 1.1
          &::before
             content: ""
             background-image: url('~@/assets/images/plus.svg')

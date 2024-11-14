@@ -46,8 +46,8 @@ export default class TodoInput extends Vue {
          background: var(--gray-500)
          color: var(--gray-300)
          border-radius: 8px
-         font-size: 16px
-         padding: 0 16px
+         font-size: 1rem
+         padding: 0 1rem
          transition: .3s
          outline: none
          &:hover

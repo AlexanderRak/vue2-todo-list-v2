@@ -53,7 +53,14 @@ export default class TodoForm extends Vue {
    .todo
       &__form
          display: grid
-         grid-template-columns: 1fr 100px
-         grid-gap: 8px
-         height: 54px
+         grid-template-columns: 1fr 7rem
+         grid-gap: .4rem
+         height: 3rem
+   @media (max-width: 480px)
+      .todo
+         &__form
+            grid-template-columns: 1fr
+            height: auto
+         &__input, &__add-task-button
+            height: 3rem
 </style>
