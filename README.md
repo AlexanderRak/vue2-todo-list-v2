@@ -9,6 +9,8 @@ Todo List - is a task management app built using Vue 2, TypeScript, and Vuex for
 - **Toggle task status**: Set the task status to "completed" or "not completed" using a toggle.
 - **Empty task list**: Display a placeholder if the task list is empty..
 - **Interface animation**: Smooth transitions between interface states (e.g. displaying a task list or a placeholder).
+- **Customizable Themes**: Colors and font styles can be easily customized via Sass variables.
+- **Reset CSS**: A unified style baseline across different browsers using reset.css.
 
 
 ## Component Structure
